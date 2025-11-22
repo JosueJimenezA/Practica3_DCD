@@ -38,7 +38,7 @@ Librería personalizada en Python para el análisis, limpieza y visualización d
 
 Clonar el repositorio:
 
-git clone [https://github.com/TU_USUARIO/ctg_viz_project.git](https://github.com/TU_USUARIO/ctg_viz_project.git)
+git clone https://github.com/JosueJimenezA/Practica3_DCD.git
 cd ctg_viz
 
 
