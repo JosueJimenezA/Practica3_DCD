@@ -1,0 +1,35 @@
+# Entornos virtuales
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Python cache y compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Pruebas (Pytest)
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribución y empaquetado
+dist/
+build/
+*.egg-info/
+
+# VS Code settings (opcional, recomendado ignorar)
+.vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
