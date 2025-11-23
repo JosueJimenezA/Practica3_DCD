@@ -30,7 +30,9 @@ Librería personalizada en Python para el análisis, limpieza y visualización d
 │   └── demo_analysis.ipynb # Notebook principal (Generador del PDF)
 ├── tests/                 # Pruebas Unitarias
 ├── app.py                 # Aplicación Web (Streamlit)
+├── setup.py               # Configuración de empaquetado
 ├── requirements.txt       # Dependencias
+├── LICENSE                # Licencia de uso
 └── README.md              # Documentación
 ```
 
@@ -39,7 +41,6 @@ Librería personalizada en Python para el análisis, limpieza y visualización d
 Clonar el repositorio:
 
 git clone https://github.com/JosueJimenezA/Practica3_DCD.git
-cd ctg_viz
 
 
 
@@ -51,13 +52,17 @@ pip install -r requirements.txt
 
 ## Uso Básico (Librería)
 
+Lo siguiente son ejemplos de uso de las funciones, se puede explorar el uso de estas funciones directamente en el notebook principal demo_analysis.ipynb. Este archivo es el insumo del pdf por lo que dentro del notebook se pueden encontrar comentarios de como se aplican las funciones, asi como comentarios respecto a los datos.
+
+#### Ejemplo de la importación de funciones de la libreria personalizada
+
 ```python
 import pandas as pd
 from ctg_viz.preprocessing import remove_null_columns, detect_handle_outliers
 from ctg_viz.plots.histograms import plot_histogram_interactive
 ```
 
-### 1. Cargar y Limpiar
+### 1. Cargar datos y Limpiar con las funciones personalizadas
 Para descargar los datos se puede realizar en el siguiente link
 https://www.kaggle.com/code/akshat0007/cardiotocology/input
 
@@ -69,7 +74,8 @@ df_final = detect_handle_outliers(df_clean, method='iqr')
 ```
 Sin embargo, si se hace uso de la herramienta interactiva se puede seleccionar visualmente otro archivo.
 
-### 2. Visualizar
+### 2. Ejemplo de visualización de los gráficos personalizados
+
 ```python
 fig = plot_histogram_interactive(df_final, col='LB', group_by='NSP')
 fig.show()
