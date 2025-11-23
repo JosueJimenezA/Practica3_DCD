@@ -6,12 +6,17 @@ from typing import Optional
 def plot_boxplot(df: pd.DataFrame, x: str, y: str, facet_col: Optional[str] = None) -> go.Figure:
     """
     Boxplot interactivo con opción de faceting (subgráficos).
+    Permite visualizar la distribución de una variable numérica (y)
+    segmentada por una variable categórica (x) y opcionalmente dividida
+    en columnas por otra variable categórica (facet_col).
     
     Args:
         df (pd.DataFrame): Datos.
         x (str): Variable categórica (Eje X).
         y (str): Variable numérica (Eje Y).
         facet_col (str, optional): Variable para dividir en columnas.
+    Returns:
+        go.Figure: Gráfico de boxplot interactivo.
     """
     fig = px.box(
         df, 

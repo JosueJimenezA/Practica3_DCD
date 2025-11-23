@@ -32,7 +32,7 @@ Librería personalizada en Python para el análisis, limpieza y visualización d
 ├── app.py                 # Aplicación Web (Streamlit)
 ├── requirements.txt       # Dependencias
 └── README.md              # Documentación
-
+```
 
 # 🛠️ Instalación
 
@@ -58,12 +58,16 @@ from ctg_viz.plots.histograms import plot_histogram_interactive
 ```
 
 ### 1. Cargar y Limpiar
+Para descargar los datos se puede realizar en el siguiente link
+https://www.kaggle.com/code/akshat0007/cardiotocology/input
+
+
 ```python
 df = pd.read_csv('data/CTG.csv')
 df_clean = remove_null_columns(df, threshold=0.2)
 df_final = detect_handle_outliers(df_clean, method='iqr')
 ```
-
+Sin embargo, si se hace uso de la herramienta interactiva se puede seleccionar visualmente otro archivo.
 
 ### 2. Visualizar
 ```python
@@ -85,6 +89,21 @@ Para validar la lógica de limpieza y procesamiento:
 ```python
 pytest tests/ -v
 ```
+
+
+##  Bonus
+Para instalar localmente la libreria solo debemos correr desde la consola el siquiente comando
+
+```bash
+pip install -e .
+```
+
+Despues de ya es posible importarla en cualquier proyecto
+
+```bash
+import ctg_viz
+```
+
 
 ##  Autores
 

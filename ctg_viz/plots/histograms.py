@@ -6,11 +6,15 @@ from typing import Optional
 def plot_histogram_interactivo(df: pd.DataFrame, col: str, group_by: Optional[str] = None) -> go.Figure:
     """
     Histograma interactivo con gráfico marginal de caja (Boxplot superior).
+    El gráfico permite agrupar por una variable categórica opcional.
+    Las barra superiores muestran el boxplot de la variable numérica.
     
     Args:
         df (pd.DataFrame): Datos.
         col (str): Variable numérica.
         group_by (str, optional): Variable categórica para agrupar colores.
+    Returns:
+        go.Figure: Gráfico interactivo.
     """
     fig = px.histogram(
         df, 

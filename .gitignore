@@ -1,4 +1,4 @@
-# Entornos virtuales
+# --- Entornos virtuales y Configuración ---
 .env
 .venv
 env/
@@ -8,28 +8,31 @@ env.bak/
 venv.bak/
 .python-version
 
-# Python cache y compilados
+# --- Python cache y compilados ---
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Jupyter Notebooks checkpoints
+# --- Jupyter Notebooks checkpoints ---
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
-# Pruebas (Pytest)
+# --- Pruebas (Pytest) ---
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Distribución y empaquetado
+# --- Distribución y empaquetado ---
 dist/
 build/
 *.egg-info/
 
-# VS Code settings (opcional, recomendado ignorar)
+# --- VS Code settings ---
 .vscode/
 
-# Archivos de sistema
+# --- Archivos de sistema ---
 .DS_Store
 Thumbs.db
+
+# Ignorar los HTML generados al exportar el notebook
+*.html

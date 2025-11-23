@@ -5,6 +5,15 @@ import pandas as pd
 def plot_bar(df: pd.DataFrame, col: str, horizontal: bool = False) -> go.Figure:
     """
     Gráfico de barras interactivo ordenado por frecuencia.
+    Se utiliza para variables categóricas/discretas.
+    Permite orientación horizontal o vertical con el argumento `horizontal`.
+
+    Args:
+        df (pd.DataFrame): Dataset con la variable a graficar.
+        col (str): Nombre de la columna categórica/discreta.
+        horizontal (bool): Si es True, el gráfico será horizontal. Default es False (vertical). 
+    Returns:
+        go.Figure: Gráfico de barras ordenado por frecuencia.
     """
 
     counts = df[col].value_counts().reset_index()

@@ -6,6 +6,8 @@ from typing import Optional
 def plot_correlation_heatmap(df: pd.DataFrame, method: str = 'pearson') -> go.Figure:
     """
     Genera un Heatmap interactivo de correlación optimizado para muchas variables.
+    Optimiza el tamaño dinámicamente según la cantidad de variables.
+    Permite elegir el método de correlación.
     
     Args:
         df (pd.DataFrame): Datos.
